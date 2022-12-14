@@ -10,6 +10,10 @@ RSpec.describe FizzBuzz::Game do
       expect(game.display_plain_number(10, 15)).to eq("10,11,12,13,14,15")
     end
 
+    it "displays numbers from 0 to 5" do
+      expect(game.display_plain_number(0, 5)).to eq("0,1,2,3,4,5")
+    end
+
     it "does not accept strings as paramaters" do
       expect(game.display_plain_number('2', 12)).to eq("Not accepted numbers")
     end
