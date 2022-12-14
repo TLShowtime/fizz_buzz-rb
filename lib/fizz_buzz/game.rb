@@ -1,7 +1,7 @@
 module FizzBuzz
   class Game
     def display_plain_number(first_number, last_number)
-      if !self.validate_numbers(first_number, last_number)
+      if !validate_numbers(first_number, last_number)
         "Not accepted numbers"
       else
         next_number = first_number
@@ -16,12 +16,7 @@ module FizzBuzz
     end
 
     def validate_numbers(first_number, last_number)
-      if first_number.is_a?(Integer) && last_number.is_a?(Integer)
-        true
-      else
-        false
-      end
+      first_number.is_a?(Integer) && last_number.is_a?(Integer)
     end
-
   end
 end
