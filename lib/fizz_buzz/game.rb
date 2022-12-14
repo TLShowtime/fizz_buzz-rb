@@ -5,14 +5,7 @@ module FizzBuzz
       if !validate_numbers(first_number, last_number)
         "Not accepted numbers"
       else
-        next_number = first_number
-        number_series = ""
-        while next_number <= last_number
-            number_series += "#{next_number}"
-            number_series += (next_number != last_number ?  "," : "")
-            next_number += 1
-        end
-        number_series
+        (first_number..last_number).map(&:to_s).join(",")
       end
     end
 
