@@ -5,7 +5,7 @@ module FizzBuzz
       if !validate_numbers(first_number, last_number)
         "Not accepted numbers"
       else
-        (first_number..last_number).map(&:to_s).join(",")
+        (first_number..last_number).to_a.join(",")
       end
     end
 
