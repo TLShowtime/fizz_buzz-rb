@@ -1,5 +1,6 @@
-require "bundler/setup"
-require "fizz_buzz/rb"
+# frozen_string_literal: true
+
+require "fizz_buzz"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

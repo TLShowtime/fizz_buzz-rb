@@ -1,6 +1,8 @@
-RSpec.describe FizzBuzz::Game do
-  it "see plain_numbers(1,4)" do
-    expect(FizzBuzz::Game.new.display_plain_number(1, 4)).to eq("1,2,3,4")
+# frozen_string_literal: true
+
+RSpec.describe FizzBuzz do
+  it "has a version number" do
+    expect(FizzBuzz::VERSION).not_to be nil
   end
 
   it "see plain_numbers(10,15)" do
