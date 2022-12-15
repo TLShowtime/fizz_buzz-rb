@@ -14,15 +14,7 @@ module FizzBuzz
         "Not accepted numbers"
       else
         (first_number..last_number).map{ |number|
-          if number % 3 == 0 && number % 5 == 0
-            "fizzbuzz"
-          elsif number % 3 == 0
-            "fizz"
-          elsif number % 5 == 0
-            "buzz"
-          else
-            number.to_s
-          end
+          show_value_fizzbuzz(number)
         }.join(",")
       end
     end
@@ -32,5 +24,14 @@ module FizzBuzz
     def validate_numbers(first_number, last_number)
       first_number.is_a?(Integer) && last_number.is_a?(Integer)
     end
+
+    def show_value_fizzbuzz(number)
+      value = ""
+      value = "fizz" if number % 3 == 0
+      value += "buzz" if number % 5 == 0
+
+      value == "" ? number : value
+    end
+
   end
 end
