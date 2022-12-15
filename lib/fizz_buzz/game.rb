@@ -19,6 +19,25 @@ module FizzBuzz
       end
     end
 
+    def play
+      keep_playing = true
+      while keep_playing
+        puts "Enter first number: "
+        first_number = gets.chomp
+        puts "Enter second number: "
+        second_number = gets.chomp
+        if not validate_user_numbers(first_number, second_number)
+          puts "Invalid input"
+        else
+          puts display_fizzbuzz(first_number.to_i, second_number.to_i)
+        end
+        puts "Type 'exit' to exit, otherwise enter any input"
+        if gets.chomp == "exit"
+          keep_playing = false
+        end
+      end
+    end
+
     private
 
     def validate_numbers(first_number, last_number)
@@ -31,6 +50,11 @@ module FizzBuzz
       value += "buzz" if number % 5 == 0
 
       value == "" ? number : value
+    end
+
+    def validate_user_numbers(first_number, second_number)
+      regex = /^(\d)+$/
+      (first_number.match? regex) && (second_number.match? regex)
     end
 
   end

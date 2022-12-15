@@ -38,4 +38,12 @@ RSpec.describe FizzBuzz::Game do
       expect(game.display_fizzbuzz(2, 23.2)).to eq("Not accepted numbers")
     end
   end
+
+  describe "#play" do
+    subject(:game) { described_class.new }
+
+    it "play fizzbuzz from 4 to 15" do
+      expect(game.play)
+    end
+  end
 end
