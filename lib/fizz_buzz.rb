@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "fizz_buzz/version"
-require_relative "fizz_buzz/game"
+require_relative 'fizz_buzz/version'
+require_relative 'fizz_buzz/game'
 
 module FizzBuzz
   class Error < StandardError; end
